@@ -45,9 +45,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">siqaadmin</value>
-    <value name="createdDate">1734429659418</value>
-    <value name="lastModifiedDate">1734429659418</value>
+    <value name="lastModifiedBy">siqaadmin</value>
+    <value name="lastModifiedDate">1734429694055</value>
     <value name="displayName">tpp</value>
     <value name="description"></value>
     <record name="stepNodeHints" javaclass="com.wm.util.Values">
@@ -67,6 +66,10 @@
         </record>
         <null name="outputMapSet"/>
         <null name="mapSet"/>
+        <number name="ui_step_index" type="Long">1</number>
+        <value name="nodePathNew">0</value>
+        <number name="nodeIndex" type="Long">0</number>
+        <number name="lineNumberForDebug" type="Long">1</number>
       </record>
       <record name="/1" javaclass="com.wm.util.Values">
         <null name="name"/>
