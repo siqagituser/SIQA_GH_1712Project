@@ -12,6 +12,11 @@ packages:
   gitUrl: https://bitbucket.org/prch
   gitUsername: prch-admin
   gitBranch: main
+- name: siqafullyloadedpackagetests
+  gitServerName: PRCH_GL_new
+  gitUrl: https://gitlab.com/ibm1494248
+  gitUsername: prch_gitlab_saas
+  gitBranch: main
 configurationVariables:
   jdbc.jdbcTestPool.waitingThread: "0"
   jdbc.jdbcTestPool.minConns: "0"
