@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="1.0" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE NAME="openweatherclient_bb" SERVICE="OpenWeatherClient.REST.openweatherclient_.services:CurrentWeatherData">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<INVOKE NAME="siqafullyloadedpackagetests" SERVICE="SIQAPartialLoadTests.data:Empty">
+  <COMMENT></COMMENT>
+</INVOKE>
+</FLOW>
