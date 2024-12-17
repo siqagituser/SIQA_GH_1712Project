@@ -8,27 +8,58 @@ packages:
   gitUsername: siqagituser
   gitBranch: main
 - name: openweatherclient_bb
+  version: "1.0"
   gitServerName: PRCH_BB_AP
   gitUrl: https://bitbucket.org/prch
   gitUsername: prch-admin
   gitBranch: main
 - name: siqafullyloadedpackagetests
+  version: "1.0"
   gitServerName: PRCH_GL_new
   gitUrl: https://gitlab.com/ibm1494248
   gitUsername: prch_gitlab_saas
   gitBranch: main
+services:
+- serviceName: project.siqa_gh_1712.integrations:tpp
+  packages:
+  - name: SIQA_GH_1712Project
+    version: "1.0"
+  - name: openweatherclient_bb
+    version: "1.0"
+  - name: siqafullyloadedpackagetests
+    version: "1.0"
+- serviceName: OpenWeatherClient.REST.openweatherclient_.services:CurrentWeatherData
+  packages:
+  - name: openweatherclient_bb
+    version: "1.0"
+- serviceName: pub.client:http
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2023
+- serviceName: pub.json:jsonStreamToDocument
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2023
+- serviceName: pub.json:documentToJSONString
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2023
+- serviceName: SIQAPartialLoadTests.data:Empty
+  packages:
+  - name: siqafullyloadedpackagetests
+    version: "1.0"
 configurationVariables:
   jdbc.jdbcTestPool.waitingThread: "0"
   jdbc.jdbcTestPool.minConns: "0"
-  jdbc.jdbcTestPool.snoopenabled: "false"
   jdbc.jdbcTestPool.expireTime: "60000"
   jdbc.jdbcTestPool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/jdbcTestPool.log;ddtdbg.ProtocolTraceShowTime=true
+  jdbc.jdbcTestPool.maxConns: "10"
+  jdbc.jdbcTestPool.userid: root
+  jdbc.jdbcTestPool.driverAlias: MySQL Database Java Connector Driver
+  jdbc.jdbcTestPool.spyenabled: "false"
+  jdbc.jdbcTestPool.snoopenabled: "false"
   jdbc.jdbcTestPool.password: "{AES}er+I3U8nDVm8F4DBRST1+A=="
   jdbc.jdbcTestPool.spyparms: SpyAttributes=(log=(file)logs/spy/jdbcTestPool.log;logTName=yes;timestamp=yes)
   jdbc.jdbcTestPool.dbURL: jdbc:mysql://mysql.test.local:3306/webm
   jdbc.jdbcTestPool.poolThreshold: "0"
-  jdbc.jdbcTestPool.maxConns: "10"
-  jdbc.jdbcTestPool.userid: root
-  jdbc.jdbcTestPool.driverAlias: MySQL Database Java Connector Driver
   jdbc.jdbcTestPool.useSSL: "false"
-  jdbc.jdbcTestPool.spyenabled: "false"
